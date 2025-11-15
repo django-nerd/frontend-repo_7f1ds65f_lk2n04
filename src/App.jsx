@@ -1,26 +1,37 @@
-import { useState } from 'react'
+import React from 'react'
+import { motion } from 'framer-motion'
+import Hero from './components/Hero'
+import About from './components/About'
+import Timeline from './components/Timeline'
+import Skills from './components/Skills'
+import Experience from './components/Experience'
+import Projects from './components/Projects'
+import Awards from './components/Awards'
+import Leadership from './components/Leadership'
+import Hobbies from './components/Hobbies'
+import Contact from './components/Contact'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="min-h-screen bg-gradient-to-br from-purple-50 to-blue-50 flex items-center justify-center">
-      <div className="bg-white p-8 rounded-lg shadow-lg">
-        <h1 className="text-3xl font-bold text-gray-800 mb-4">
-          Vibe Coding Platform
-        </h1>
-        <p className="text-gray-600 mb-6">
-          Your AI-powered development environment
-        </p>
-        <div className="text-center">
-          <button
-            onClick={() => setCount(count + 1)}
-            className="bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
-          >
-            Count is {count}
-          </button>
-        </div>
+    <div className="min-h-screen text-white bg-[#05070c]">
+      {/* Global background accents */}
+      <div className="fixed inset-0 -z-10">
+        <div className="absolute inset-0 bg-[radial-gradient(125%_125%_at_50%_10%,#0b0f1a_10%,#05070c_60%,#000000_100%)]" />
+        <div className="absolute inset-0 opacity-[0.06]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, #94a3b8 1px, transparent 1px)', backgroundSize: '26px 26px' }} />
       </div>
+
+      <Hero />
+      <About />
+      <Timeline />
+      <Skills />
+      <Experience />
+      <Projects />
+      <Awards />
+      <Leadership />
+      <Hobbies />
+      <Contact />
+
+      <footer className="py-10 text-center text-xs text-white/40">© {new Date().getFullYear()} Rishi Bagri</footer>
     </div>
   )
 }
